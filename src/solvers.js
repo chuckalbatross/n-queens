@@ -62,7 +62,7 @@ window.extractBoardMatrix = function(board) {
     matrix.push(row);
   }
   return matrix;
-}
+};
 
 window.findNRooksSolution = function(n) {
   var solutionBoard = new Board({'n': n});
@@ -73,13 +73,13 @@ window.findNRooksSolution = function(n) {
     //COLS
     for (var k = 0; k < n; k++) {
       // while (numPiecesRemaining > 0) {
-        //can you put it there without causing rowConflict and ColConflict
-        solutionBoard.attributes[i][k] = 1;
-        // numPiecesRemaining--;
-        if (solutionBoard.hasAnyRowConflicts(i) || solutionBoard.hasAnyColConflicts(k)) {
-          solutionBoard.attributes[i][k] = 0;
-          // numPiecesRemaining++;
-        }
+      //can you put it there without causing rowConflict and ColConflict
+      solutionBoard.attributes[i][k] = 1;
+      // numPiecesRemaining--;
+      if (solutionBoard.hasAnyRowConflicts(i) || solutionBoard.hasAnyColConflicts(k)) {
+        solutionBoard.attributes[i][k] = 0;
+        // numPiecesRemaining++;
+      }
       // }
     }
   }
@@ -119,7 +119,7 @@ window.countNRooksSolutions = function(n) {
         board.togglePiece(rowIndex, i);
       }
     }
-  }
+  };
 
   //call recursive function
   decisionTreeRecursion(0);
@@ -219,7 +219,7 @@ window.findNQueensSolution = function(n) {
         board.togglePiece(rowIndex, i);
       }
     }
-  }
+  };
 
 
   diveIn(0);
